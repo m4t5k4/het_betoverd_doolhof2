@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D9FB3FA-80E9-4877-956A-289E3D410ECF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>het_betoverd_doolhof</RootNamespace>
+    <AssemblyName>het_betoverd_doolhof</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="View\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Model\" />
+    <Folder Include="Stores\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\splash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze\fixed\m_armor.png" />
+    <Resource Include="Resources\maze\fixed\m_blue.png" />
+    <Resource Include="Resources\maze\fixed\m_book.png" />
+    <Resource Include="Resources\maze\fixed\m_chandelier.png" />
+    <Resource Include="Resources\maze\fixed\m_chest.png" />
+    <Resource Include="Resources\maze\fixed\m_coins.png" />
+    <Resource Include="Resources\maze\fixed\m_crown.png" />
+    <Resource Include="Resources\maze\fixed\m_gem.png" />
+    <Resource Include="Resources\maze\fixed\m_green.png" />
+    <Resource Include="Resources\maze\fixed\m_keys.png" />
+    <Resource Include="Resources\maze\fixed\m_map.png" />
+    <Resource Include="Resources\maze\fixed\m_red.png" />
+    <Resource Include="Resources\maze\fixed\m_ring.png" />
+    <Resource Include="Resources\maze\fixed\m_skull.png" />
+    <Resource Include="Resources\maze\fixed\m_sword.png" />
+    <Resource Include="Resources\maze\fixed\m_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maze\rotatable\m_bat_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_bat_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_bat_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_bat_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_corner_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_corner_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_corner_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_corner_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_dragonfly_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_dragonfly_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_dragonfly_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_dragonfly_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_drake_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_drake_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_drake_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_drake_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_fairy_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_fairy_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_fairy_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_fairy_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_ghost_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_ghost_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_ghost_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_ghost_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_ogre_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_ogre_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_ogre_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_ogre_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_owl_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_owl_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_owl_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_owl_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_rat_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_rat_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_rat_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_rat_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_salamander_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_salamander_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_salamander_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_salamander_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_scarab_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_scarab_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_scarab_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_scarab_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_spider_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_spider_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_spider_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_spider_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_straight_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_straight_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_straight_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_straight_4.png" />
+    <Resource Include="Resources\maze\rotatable\m_wish_ghost_1.png" />
+    <Resource Include="Resources\maze\rotatable\m_wish_ghost_2.png" />
+    <Resource Include="Resources\maze\rotatable\m_wish_ghost_3.png" />
+    <Resource Include="Resources\maze\rotatable\m_wish_ghost_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\controls\arrow_down.png" />
+    <Resource Include="Resources\controls\arrow_left.png" />
+    <Resource Include="Resources\controls\arrow_right.png" />
+    <Resource Include="Resources\controls\arrow_up.png" />
+    <Resource Include="Resources\controls\rotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\wizards\air.png" />
+    <Resource Include="Resources\wizards\earth.png" />
+    <Resource Include="Resources\wizards\fire.png" />
+    <Resource Include="Resources\wizards\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\treasures\armor.png" />
+    <Resource Include="Resources\treasures\bat.png" />
+    <Resource Include="Resources\treasures\book.png" />
+    <Resource Include="Resources\treasures\chandelier.png" />
+    <Resource Include="Resources\treasures\chest.png" />
+    <Resource Include="Resources\treasures\coins.png" />
+    <Resource Include="Resources\treasures\crown.png" />
+    <Resource Include="Resources\treasures\dragonfly.png" />
+    <Resource Include="Resources\treasures\drake.png" />
+    <Resource Include="Resources\treasures\fairy.png" />
+    <Resource Include="Resources\treasures\gem.png" />
+    <Resource Include="Resources\treasures\ghost.png" />
+    <Resource Include="Resources\treasures\keys.png" />
+    <Resource Include="Resources\treasures\map.png" />
+    <Resource Include="Resources\treasures\ogre.png" />
+    <Resource Include="Resources\treasures\owl.png" />
+    <Resource Include="Resources\treasures\rat.png" />
+    <Resource Include="Resources\treasures\ring.png" />
+    <Resource Include="Resources\treasures\salamander.png" />
+    <Resource Include="Resources\treasures\scarab.png" />
+    <Resource Include="Resources\treasures\skull.png" />
+    <Resource Include="Resources\treasures\spider.png" />
+    <Resource Include="Resources\treasures\sword.png" />
+    <Resource Include="Resources\treasures\wish_ghost.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
